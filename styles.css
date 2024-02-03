@@ -1,0 +1,360 @@
+#intro {
+    background-image: url(./Imagini/cool-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body{
+height: 100vh;
+    background: linear-gradient(-45deg, #FDE767, #feb47b, #0B60B0, #FF004D);
+    background-size: 200% 200%;
+    animation: GradientMove 8s ease infinite;
+}
+
+@keyframes GradientMove {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 50% 0%;
+    }
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+        }
+
+    
+.nav-link:hover {
+                text-shadow:1px 1px 20px rgb(255, 255, 255);
+        }
+    
+.nav-link:hover:before {
+            border: none;
+            color: #fcfcfc;
+            height: 100%;
+            transform: translateX(0);
+            transition: .5s transform linear, .5s height linear .5s;
+        }
+
+        h1{
+            text-align: center;
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            padding-top: 100px;
+            font-size: 36px;
+        }
+
+                /* Ecrane de tabletă */
+                @media (max-width: 768px) {
+                    h1 {
+                        font-size: 32px;
+                        /* Puțin mai mic pentru tablete */
+                    }
+                }
+        
+                /* Ecrane de telefon mobil */
+                @media (max-width: 480px) {
+                    h1 {
+                        font-size: 28px;
+                        /* Și mai mic pentru telefoane */
+                    }
+                }
+        .Container{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .CatalinaProfilePhoto{
+            width: 300px;
+            height: auto;
+        }
+.Container>.CatalinaProfilePhoto>img{
+    border-radius: 100%;
+        margin-top: 50px;
+        max-width: 100%;
+        height: auto;
+    
+}
+.Container>.Andreea-Description{
+            max-width: 600px;
+            /* Setează lățimea maximă a containerului */
+            margin: 0 auto;
+            /* Centrarea containerului pe orizontală */
+            padding: 20px;
+            /* Spațiu suplimentar în interiorul containerului */
+}
+.Andreea-Description{
+    color: white;
+    font-family: 'Single Day', cursive;
+}
+
+/* Stilul implicit pentru text, folosit pentru ecrane mai mari */
+p {
+    font-size: 18px;
+}
+
+/* Media query pentru ecrane cu lățimea maximă de 768px (de exemplu, tablete) */
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Media query pentru ecrane cu lățimea maximă de 480px (de exemplu, telefoane mobile) */
+@media (max-width: 480px) {
+    p {
+        font-size: 14px;
+    }
+}
+
+.btn {
+    height: 4em;
+    width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0px solid rgb(0, 0, 0);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.wrapper {
+    height: 2em;
+    width: 8em;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 17px;
+    z-index: 1;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: #B4D4FF;
+    transition: all 0.5s ease;
+    font-family: 'Single Day', cursive;
+}
+
+.flower {
+    display: grid;
+    grid-template-columns: 1em 1em;
+    position: absolute;
+    transition: grid-template-columns 0.8s ease;
+}
+
+.flower1 {
+    top: -12px;
+    left: -13px;
+    transform: rotate(5deg);
+}
+
+.flower2 {
+    bottom: -5px;
+    left: 8px;
+    transform: rotate(35deg);
+}
+
+.flower3 {
+    bottom: -15px;
+    transform: rotate(0deg);
+}
+
+.flower4 {
+    top: -14px;
+    transform: rotate(15deg);
+}
+
+.flower5 {
+    right: 11px;
+    top: -3px;
+    transform: rotate(25deg);
+}
+
+.flower6 {
+    right: -15px;
+    bottom: -15px;
+    transform: rotate(30deg);
+}
+
+.petal {
+    height: 1em;
+    width: 1em;
+    border-radius: 40% 70% / 7% 90%;
+    background: linear-gradient(#E9A8F2, #B31312);
+    border: 0.5px solid #FF90BC;
+    z-index: 0;
+    transition: width 0.8s ease, height 0.8s ease;
+}
+
+.two {
+    transform: rotate(90deg);
+}
+
+.three {
+    transform: rotate(270deg);
+}
+
+.four {
+    transform: rotate(180deg);
+}
+
+.btn:hover .petal {
+    background: linear-gradient(white, red);
+    border: 0.5px solid red;
+}
+
+.btn:hover .flower {
+    grid-template-columns: 1.5em 1.5em;
+}
+
+.btn:hover .flower .petal {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.btn:hover .text {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.btn:hover div.flower1 {
+    animation: 15s linear 0s normal none infinite running flower1;
+}
+
+@keyframes flower1 {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(365deg);
+    }
+}
+
+.btn:hover div.flower2 {
+    animation: 13s linear 1s normal none infinite running flower2;
+}
+
+@keyframes flower2 {
+    0% {
+        transform: rotate(35deg);
+    }
+
+    100% {
+        transform: rotate(-325deg);
+    }
+}
+
+.btn:hover div.flower3 {
+    animation: 16s linear 1s normal none infinite running flower3;
+}
+
+@keyframes flower3 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn:hover div.flower4 {
+    animation: 17s linear 1s normal none infinite running flower4;
+}
+
+@keyframes flower4 {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(375deg);
+    }
+}
+
+.btn:hover div.flower5 {
+    animation: 20s linear 1s normal none infinite running flower5;
+}
+
+@keyframes flower5 {
+    0% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(-335deg);
+    }
+}
+
+.btn:hover div.flower6 {
+    animation: 15s linear 1s normal none infinite running flower6;
+}
+
+@keyframes flower6 {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(390deg);
+    }
+}
+.btn a,.btn a:visited,.btn a:hover,.btn a:active {
+    color: white;
+    text-decoration: none;
+}
+
+h2{
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 480px){
+    h2 {
+        font-size: 20;
+    }
+}
+.DespreMine>li{
+    list-style-type: square;
+    color: white;
+    
+}
+h3{
+    font-family: 'Single Day', cursive;
+    color: white;
+}
+.card-cover{
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width :768){
+.icon>a>img{
+    height: 40px;
+} }
+
+@media (max-width :480px){
+    .icon>a>img{
+        height: 35px;
+    }
+}
